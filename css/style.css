@@ -1,8 +1,1 @@
-body {
-  background-color: rgb(40, 207, 68);
-  transform: rotate(30deg); /* Standard syntax */
-  display: flex;
-  box-shadow: 0px 0px 0px 3px #ff6e28, 0px 0px 0px 7px rgba(255, 110, 40, 0.5) !important;
-}
-
-/*# sourceMappingURL=style.css.map */
+body{background-color:#e314d9;transform:rotate(30deg);display:flex;box-shadow:0px 0px 0px 3px #ff6e28,0px 0px 0px 7px rgba(255,110,40,.5) !important}body ::-moz-placeholder{color:#dd1515}body ::placeholder{color:#dd1515}

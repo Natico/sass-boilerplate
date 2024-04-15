@@ -5,11 +5,19 @@
   "main": "index.js",
   "scripts": {
     "sass-dev": "sass --watch --update --style=expanded sass:css",
-    "sass-prod": "sass --no-source-map --style=compressed sass:css"
+    "sass-prod": "sass --no-source-map --style=compressed sass:css",
+    "prefix": "postcss css/style.css --replace --use autoprefixer -b 'defaults' --no-map",
+    "compile-dev": "npm run sass-dev && npm run prefix",
+    "compile-prod": "npm run sass-prod && npm run prefix"
   },
   "author": "nasser amjadian",
   "license": "ISC",
   "devDependencies": {
-    "sass": "^1.75.0"
+  },
+  "dependencies": {
+    "sass": "^1.75.0",
+    "autoprefixer": "^10.4.19",
+    "postcss": "^8.4.38",
+    "postcss-cli": "^11.0.0"
   }
 }
