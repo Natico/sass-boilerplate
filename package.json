@@ -1,23 +1,25 @@
+
+
+
 {
   "name": "sass-compile",
   "version": "1.0.0",
-  "description": "A simple sass compile config.",
+  "description": "A simple Sass compile config.",
   "main": "index.js",
   "scripts": {
-    "sass-dev": "sass --watch --update --style=expanded sass:css",
-    "sass-prod": "sass --no-source-map --style=compressed sass:css",
-    "prefix": "postcss css/style.css --replace --use autoprefixer -b 'defaults' --no-map",
-    "compile-dev": "npm run sass-dev && npm run prefix",
-    "compile-prod": "npm run sass-prod && npm run prefix"
+    "watch": "npm run compile -- --watch",
+    "compile": "npm run sass && npm run prefix",
+    "sass": "sass sass/style.scss css/style.css --no-source-map --style=expanded",
+    "prefix": "postcss css/style.css --replace --use autoprefixer -b 'defaults' --no-map"
   },
   "author": "nasser amjadian",
   "license": "ISC",
   "devDependencies": {
-  },
-  "dependencies": {
     "sass": "^1.75.0",
     "autoprefixer": "^10.4.19",
     "postcss": "^8.4.38",
     "postcss-cli": "^11.0.0"
   }
 }
+
+
